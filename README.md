@@ -6,8 +6,10 @@ if (http_method === 'GET') {
       for (k in params) {
         v = params[k];
         if (typeof v === 'function' 
-```<font color=#0099ff size=5 face="黑体"> || !Object.keys(v).length</font>
-```js       ) {
+```
+<font color=#0099ff size=5 face="黑体"> || !Object.keys(v).length</font>
+```js
+         ) {
           continue;
         }
         flattenParams[k] = typeof v === 'object' ? JSON.stringify(v) : v;
@@ -22,8 +24,10 @@ if (http_method === 'GET') {
     }
     responseStatus = null;
     fetched = 
-```<font color=#0099ff size=5 face="黑体">fetch.</font>
-```js    fetch(url, fetchParams).then(function(response) {
+```
+<font color=#0099ff size=5 face="黑体">fetch.</font>
+```js    
+fetch(url, fetchParams).then(function(response) {
 ```
 var a =loopbackPromised.createInstance({
   baseURL: 'http://localhost:3000/api'
